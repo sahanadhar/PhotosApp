@@ -1,0 +1,12 @@
+<ul>
+	<li *ngFor="let a of array">
+		<img
+      [src]="a"
+      alt="hijibiji"
+      height="100"
+      width="100"
+      (click)="displayName(a)"
+      appHover
+    />
+  </li>
+</ul>

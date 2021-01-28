@@ -1,0 +1,19 @@
+<ul>
+	<li *ngFor="let comment of comments">({{comment.name}}){{comment.msg}}</li>
+</ul>
+<img [src]="this.pic" appHover />
+<form #formvar="ngForm" (ngSubmit)="displayComments(formvar)">
+	<input
+    type="text"
+    [(ngModel)]="name"
+    name="name"
+    required
+    #namevar="ngModel"
+  />
+	<input type="text" [(ngModel)]="msg" name="msg" required #msgvar="ngModel" />
+	<div>
+		<button type="submit"  appHover [disabled]="formvar.invalid">
+      Submit your comment
+    </button>
+	</div>
+</form>
